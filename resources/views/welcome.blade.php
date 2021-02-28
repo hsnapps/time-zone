@@ -1,99 +1,69 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Laravel</title>
+@section('content')
+    <!-- ======= Hero Section ======= -->
+    @include('parts.hero')
+    <!-- End Hero -->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        @include('parts.about')
+        <!-- End About Section -->
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        <!-- ======= Values Section ======= -->
+        @include('parts.valules')
+        <!-- End Values Section -->
 
-            .full-height {
-                height: 100vh;
-            }
+        <!-- ======= Counts Section ======= -->
+        @include('parts.counts')
+        <!-- End Counts Section -->
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        <!-- ======= Features Section ======= -->
+        @include('parts.features')
+        <!-- End Features Section -->
 
-            .position-ref {
-                position: relative;
-            }
+        <!-- ======= Services Section ======= -->
+        @include('parts.services')
+        <!-- End Services Section -->
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        <!-- ======= Pricing Section ======= -->
+        @include('parts.pricing')
+        <!-- End Pricing Section -->
 
-            .content {
-                text-align: center;
-            }
+        <!-- ======= F.A.Q Section ======= -->
+        @include('parts.faq')
+        <!-- End F.A.Q Section -->
 
-            .title {
-                font-size: 84px;
-            }
+        <!-- ======= Portfolio Section ======= -->
+        @include('parts.portfolio')
+        <!-- End Portfolio Section -->
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+        <!-- ======= Testimonials Section ======= -->
+        @include('parts.testimonials')
+        <!-- End Testimonials Section -->
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <!-- ======= Team Section ======= -->
+        @include('parts.team')
+        <!-- End Team Section -->
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+        <!-- ======= Clients Section ======= -->
+        @include('parts.clients')
+        <!-- End Clients Section -->
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+        <!-- ======= Recent Blog Posts Section ======= -->
+        @include('parts.posts')
+        <!-- End Recent Blog Posts Section -->
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+        <!-- ======= Contact Section ======= -->
+        @include('parts.contact')
+        <!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    @include('parts.footer')
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+@endsection
